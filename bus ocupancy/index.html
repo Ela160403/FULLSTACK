@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bus ticket booking</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Bus ticket booking</h1>
+      <div class="bus-details">
+        <h2>Bus details</h2>
+        <p>Bus number: <span id="bus_number">123</span></p>
+        <p>Arrival time: <span id="bus_timing">12:00 PM</span></p>
+        <p>Occupancy rate: <span id="occupancy_rate">50%</span></p>
+      </div>
+      <div class="ticket-booking">
+        <h2>Ticket booking</h2>
+        <label for="ticketCount">Number of tickets: </label>
+        <input type="number" id="ticketCount" min="1" value="1" />
+        <button id="bookButton">Book ticket</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grading System</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Grading System</h1>
+
+    <!-- Home Page -->
+    <div id="homePage">
+      <h2>Choose an Action</h2>
+      <button onclick="showStudentForm()">Add Student</button>
+      <button onclick="showAddMarks()">Add Marks</button>
+      <button onclick="showClassAverage()">View Class Average</button>
+      <button onclick="showStudentDetails()">Show Student details</button>
+    </div>
+
+    <!-- Student Form -->
+    <div id="studentForm" style="display:none;">
+      <h2>Add Student</h2>
+      <form id="studentDetailsForm" onsubmit="addStudent(event)">
+        <div class="form-group">
+          <label for="studentName">Student Name:</label>
+          <input type="text" id="studentName" name="studentName" required>
+        </div>
+        <div class="form-group">
+          <label for="studentRollNo">Roll Number:</label>
+          <input type="text" id="studentRollNo" name="studentRollNo" required>
+        </div>
+        <div class="form-group">
+          <label for="department">Department:</label>
+          <select id="department" name="department">
+            <option value="Computer Science">Computer Science</option>
+            <option value="Commerce">Commerce</option>
+          </select>
+        </div>
+        <button type="submit">Submit</button>
+        <button type="button" onclick="goBack()">Back</button>
+      </form>
+    </div>
+
+    <!-- Add Marks Section -->
+    <div id="addMarks" style="display:none;">
+      <h2>Add Marks</h2>
+      <form id="addMarksForm" onsubmit="addMarks(event)">
+        <label for="rollNo">Enter Roll Number:</label>
+        <input type="text" id="rollNo" name="rollNo" required><br>
+        <div class="form-group">
+          <label for="subject1">Subject 1 Marks:</label>
+          <input type="number" id="subject1" name="subject1" required>
+        </div>
+        <div class="form-group">
+          <label for="subject2">Subject 2 Marks:</label>
+          <input type="number" id="subject2" name="subject2" required>
+        </div>
+        <div class="form-group">
+          <label for="subject3">Subject 3 Marks:</label>
+          <input type="number" id="subject3" name="subject3" required>
+        </div>
+        <div class="form-group">
+          <label for="subject4">Subject 4 Marks:</label>
+          <input type="number" id="subject4" name="subject4" required>
+        </div>
+        <div class="form-group">
+          <label for="subject5">Subject 5 Marks:</label>
+          <input type="number" id="subject5" name="subject5" required>
+        </div>
+        <!-- Display total marks here -->
+        <div class="form-group">
+          <label for="totalMarks">Total Marks:</label>
+          <p id="totalMarks"></p>
+        </div>
+        <button type="submit">Submit</button>
+        <button type="button" onclick="goBack()">Back</button>
+      </form>
+    </div>
+    
+    <!-- Student Details Section -->
+<div id="studentDetails" style="display:none;">
+  <h2>Student Details</h2>
+  <div id="studentDetailsContent"></div>
+  <button class="back-btn" onclick="showStudentDetails(event)">Back</button>
+
+</div>
+
+
+
+
+    <!-- Class Average Section -->
+    <div id="classAverage" style="display:none;">
+      <h2>Class Average</h2>
+      <p id="computerScienceAverage"></p>
+      <p id="commerceAverage"></p>
+      <button onclick="goBack()">Back</button>
+    </div>
+  </div>
+
+  <script src="s.js"></script>
+</body>
+</html>

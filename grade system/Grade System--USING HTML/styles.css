@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+h1 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+/* Section Title Styles */
+h2 {
+  color: #343a40;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+/* Button Styles */
+button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Form Styles */
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  color: #555;
+  margin-bottom: 8px;
+  display: block;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: calc(100% - 16px);
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Total Marks Styles */
+#totalMarks {
+  font-weight: bold;
+  color: #28a745;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Class Average Styles */
+.container p {
+  margin: 10px 0;
+}
+
+/* Back Button Styles */
+.back-btn {
+  background-color: #6c757d;
+}
+
+.back-btn:hover {
+  background-color: #5a6268;
+}
+
+/* Footer Styles */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+/* Animation Styles */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Additional Styles */
+#studentDetailsContent {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+#studentDetails {
+  flex: 1; /* Allow the details to occupy remaining space */
+}
